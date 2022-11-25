@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vasanthrajqbpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vasanthrajqbpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vasanthrajqbpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vasanthrajqbpipelinesjavascriptdocker 
+          image: mvtsregistry.azurecr.io/vasanthrajqbpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
